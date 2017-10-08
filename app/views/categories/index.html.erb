@@ -1,3 +1,9 @@
-<% @categories.each do |category| %>
-  <%= @category.title %>
-<% end %>
+<h1>Categories</h1>
+
+<ul>
+  <% @categories.each do |category| %>
+    <% if category.items %>
+      <li><%= category.title %></li>
+    <% end %>
+  <% end %>
+</ul>
